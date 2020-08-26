@@ -9,7 +9,9 @@ const App = () => (
     </div>
     <div className='user-info'>
       <img src="https://avatars3.githubusercontent.com/u/30598272?v=4" alt=""/>
-      <h1><a href="https://github.com/FredHorizon">Fred Oliveira</a></h1>
+      <h1 className='username'>
+        <a href="https://github.com/FredHorizon">Fred Oliveira</a>
+      </h1>
 
       <ul className='repos-info'>
         <li>Repositórios Públicos: 11</li>
@@ -26,12 +28,14 @@ const App = () => (
         <h2>Repositórios:</h2>
         <ul>
           <li><a href="#">Nome do repositório</a></li>
+          <li><a href="#">Nome do repositório</a></li>
         </ul>
       </div>
 
       <div className='starred'>
         <h2>Favoritos:</h2>
         <ul>
+          <li><a href="#">Nome do repositório</a></li>
           <li><a href="#">Nome do repositório</a></li>
         </ul>
       </div>
