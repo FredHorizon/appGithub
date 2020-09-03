@@ -14,8 +14,7 @@ const renderApp = (NextApp) => {
   )
 }
 
-renderApp(App) // na primeira chamada vem o app atual.
-               // Na segunda, vem o app com a atualização do DOM aplicada somente no NextApp
+renderApp(App)
 
 if (module.hot) {
   module.hot.accept('./app', () => {

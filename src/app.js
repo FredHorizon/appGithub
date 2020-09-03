@@ -7,16 +7,21 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      
+      userinfo: {
+        username: 'Fulanin'
+      },
+      repos: [{}],
+      starred: [{}]
     }
   }
 
   render () {
-    return (
-      <AppContent></AppContent>
-    )
+    return <AppContent
+      userinfo={this.state.userinfo}
+      repos={this.state.repos}
+      starred={this.state.starred}
+    />
   }
-  
 }
 
 export default App
