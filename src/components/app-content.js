@@ -9,11 +9,11 @@ import Repos from './repos'
 const AppContent = ({ userinfo, repos, starred }) => (
   <div className='app'>
     <Search />
-    { !!userinfo &&  <UserInfo userinfo={userinfo} /> } {/* !! transforma o userinfo em valor booleano */}
+    {!!userinfo && <UserInfo userinfo={userinfo} />}
 
-    { !!userinfo && <Actions />}
+    {!!userinfo && <Actions />}
 
-    { !!repos.lenght &&
+    {!!repos.length &&
       <Repos
         className='repos'
         title='Repositórios:'
@@ -21,7 +21,7 @@ const AppContent = ({ userinfo, repos, starred }) => (
       />
     }
 
-    { !!starred.lenght &&
+    {!!starred.length &&
       <Repos
         className='starred'
         title='Favoritos:'
@@ -31,9 +31,9 @@ const AppContent = ({ userinfo, repos, starred }) => (
   </div>
 )
 
-AppContent.protoTypes = {
+AppContent.propTypes = {
   userinfo: PropTypes.object.isRequired,
-  repos: PropTypes.oarray.isRequired,
+  repos: PropTypes.array.isRequired,
   starred: PropTypes.array.isRequired
 }
 
