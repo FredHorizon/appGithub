@@ -24,8 +24,10 @@ class App extends Component {
     const value = e.target.value
     const keyCode = e.which || e.keyCode
     const ENTER = 13
+    const target = e.target
   
     if (keyCode === ENTER) {
+      target.disable = true
       ajax().get(this.getGitHubApiUrl(value))
       .then((result) => {
         this.setState({
@@ -40,6 +42,9 @@ class App extends Component {
           repos: [], // limpa a lista de repositório atual a cada nova busca de um usuário
           starred: [] // limpa a lista de favoritos atual a cada nova busca de um usuário
         })
+      })
+      .always(() => {
+        target.disable = false
       })
     }
   }
